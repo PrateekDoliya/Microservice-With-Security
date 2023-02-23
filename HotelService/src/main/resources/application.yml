@@ -1,0 +1,26 @@
+server:
+  port: 8083
+  
+  
+spring:
+  application:
+    name: HOTEL-SERVICE
+  datasource:
+    url: jdbc:mysql://localhost:3306/hotel_service
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: intelliatech
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+    
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
